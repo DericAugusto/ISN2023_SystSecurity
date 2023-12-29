@@ -1,0 +1,1304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0060)http://localhost:9090/ScadaBR/data_source_edit.shtm?typeId=3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    ScadaBR - 1.0 CE
+    
+  </title>
+  
+  <!-- Meta -->
+  
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="Copyright" content="ScadaBR ©©2009-2011 Fundação Certi, MCA Sistemas, Unis Sistemas, Conetec, Todos os direitos reservados.">
+  <meta name="DESCRIPTION" content="ScadaBR Software">
+  <meta name="KEYWORDS" content="ScadaBR Software">
+  
+  <!-- Style -->
+  <link rel="icon" href="http://localhost:9090/ScadaBR/images/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:9090/ScadaBR/images/favicon.ico">
+  <link href="./ScadaBR - 1.0 CE_files/common.css" type="text/css" rel="stylesheet">
+  
+  
+  <!-- Scripts -->
+  <script type="text/javascript">var djConfig = { isDebug: false, extraLocale: ['en-us', 'nl', 'nl-nl', 'ja-jp', 'fi-fi', 'sv-se', 'zh-cn', 'zh-tw','xx'] };</script>
+  <!-- script type="text/javascript" src="http://o.aolcdn.com/dojo/0.4.2/dojo.js"></script -->
+  <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/dojo.js"></script><style type="text/css">.dojoLayoutContainer{ position: relative; display: block; overflow: hidden; }
+body .dojoAlignTop, body .dojoAlignBottom, body .dojoAlignLeft, body .dojoAlignRight { position: absolute; overflow: hidden; }
+body .dojoAlignClient { position: absolute }
+.dojoAlignClient { overflow: auto; }
+</style>
+  <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/engine.js"></script>
+  <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/util.js"></script>
+  <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/MiscDwr.js"></script>
+  <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/soundmanager2-nodebug-jsmin.js"></script>
+  <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/common.js"></script>
+  
+    <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/DataSourceEditDwr.js"></script>
+  
+  <script type="text/javascript">
+    mango.i18n = function() {return {'js.help.lastUpdated':"Last updated",'js.disabledSe':"Disabled scheduled event",'js.disabledPointLink':"Disabled point link",'js.help.error':"Error",'common.disabledToggle':"Disabled - click to enable",'header.mute':"Mute",'js.email.testSent':"Test email has been sent",'common.administrator':"Administrator",'js.help.related':"Related items",'common.sendTestEmail':"Send test email",'compoundDetectors.compoundEventDetector':"Compound event detector",'js.email.noRecipForEmail':"No recipients to which to send test email",'common.enabledToggle':"Enabled - click to disable",'js.email.addAddress':"Add address",'header.unmute':"Unmute",'pointLinks.pointLink':"Point link",'js.email.addMailingList':"Add mailing list",'scheduledEvents.se':"Scheduled event",'common.alarmLevel.lifeSafety':"Life safety",'common.minimize':"Minimize",'js.email.addUser':"Add user",'js.disabledCed':"Disabled compound event detector",'common.maximize':"Maximize",'js.email.noRecipients':"No recipients",'common.user':"User",'common.alarmLevel.none':"None",'common.access.set':"set",'js.help.loading':"Loading...",'events.silence':"Silence",'common.disabled':"Disabled",'common.access.read':"read",'common.alarmLevel.critical':"Critical",'common.alarmLevel.info':"Information",'events.unsilence':"Unsilence",'common.alarmLevel.urgent':"Urgent"};}();
+  </script>
+  
+    <script type="text/javascript" src="./ScadaBR - 1.0 CE_files/header.js"></script>
+    <script type="text/javascript">
+      dwr.util.setEscapeHtml(false);
+      
+        dojo.addOnLoad(mango.header.onLoad);
+        dojo.addOnLoad(function() { setUserMuted(false); });
+      
+      
+      function setLocale(locale) {
+          MiscDwr.setLocale(locale, function() { window.location = window.location });
+      }
+      
+      function setHomeUrl() {
+          MiscDwr.setHomeUrl(window.location.href, function() { alert("Home URL saved"); });
+      }
+      
+      function goHomeUrl() {
+          MiscDwr.getHomeUrl(function(loc) { window.location = loc; });
+      }
+    </script>
+  
+</head>
+
+<body>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" id="mainHeader">
+  <tbody><tr>
+    <td><img src="./ScadaBR - 1.0 CE_files/scadabrLogoMed.png" alt="Logo"></td>
+    
+      <td align="center" width="99%" id="eventsRow">
+        <a href="http://localhost:9090/ScadaBR/events.shtm">
+          <span id="__header__alarmLevelDiv" style="opacity: 0.4;">
+            <img id="__header__alarmLevelImg" src="./ScadaBR - 1.0 CE_files/flag_blue.png" alt="Information" border="0" title="Information">
+            <span id="__header__alarmLevelText">Information</span>
+          </span>
+        </a>
+      </td>
+    
+    
+      <td align="right" valign="bottom" class="projectTitle" style="padding:5px; white-space: nowrap;">ScadaBR - 1.0 CE</td>
+    
+  </tr>
+</tbody></table>
+
+
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" id="subHeader">
+    <tbody><tr>
+      <td style="cursor:default">
+        
+          <a href="http://localhost:9090/ScadaBR/watch_list.shtm"><img src="./ScadaBR - 1.0 CE_files/eye.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Watch list&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+          <a href="http://localhost:9090/ScadaBR/views.shtm"><img src="./ScadaBR - 1.0 CE_files/icon_view.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Graphical views&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+          <a href="http://localhost:9090/ScadaBR/events.shtm"><img src="./ScadaBR - 1.0 CE_files/flag_white.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Alarms&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+          <a href="http://localhost:9090/ScadaBR/reports.shtm"><img src="./ScadaBR - 1.0 CE_files/report.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Reports&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+                
+          
+            <img src="./ScadaBR - 1.0 CE_files/menu_separator.png">
+            <a href="http://localhost:9090/ScadaBR/event_handlers.shtm"><img src="./ScadaBR - 1.0 CE_files/cog.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Event handlers&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/data_sources.shtm"><img src="./ScadaBR - 1.0 CE_files/icon_ds.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Data sources&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/scheduled_events.shtm"><img src="./ScadaBR - 1.0 CE_files/clock.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Scheduled events&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/compound_events.shtm"><img src="./ScadaBR - 1.0 CE_files/multi_bell.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Compound event detectors&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/point_links.shtm"><img src="./ScadaBR - 1.0 CE_files/link.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Point links&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/scripting.shtm"><img src="./ScadaBR - 1.0 CE_files/script_gear.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Scripting&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+          
+          
+          <img src="./ScadaBR - 1.0 CE_files/menu_separator.png">
+          <a href="http://localhost:9090/ScadaBR/users.shtm"><img src="./ScadaBR - 1.0 CE_files/user.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Users&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+          
+          
+            <a href="http://localhost:9090/ScadaBR/point_hierarchy.shtm"><img src="./ScadaBR - 1.0 CE_files/folder_brick.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Point hierarchy&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/mailing_lists.shtm"><img src="./ScadaBR - 1.0 CE_files/book.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Mailing lists&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/publishers.shtm"><img src="./ScadaBR - 1.0 CE_files/transmit.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Publishers&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/maintenance_events.shtm"><img src="./ScadaBR - 1.0 CE_files/hammer.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Maintenance events&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/system_settings.shtm"><img src="./ScadaBR - 1.0 CE_files/application_form.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;System settings&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/emport.shtm"><img src="./ScadaBR - 1.0 CE_files/script_code.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Import/Export&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+            <a href="http://localhost:9090/ScadaBR/sql.shtm"><img src="./ScadaBR - 1.0 CE_files/script.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;SQL&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+          
+          
+          <img src="./ScadaBR - 1.0 CE_files/menu_separator.png">
+          <a href="http://localhost:9090/ScadaBR/logout.htm"><img src="./ScadaBR - 1.0 CE_files/control_stop_blue.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Logout&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+          <a href="http://localhost:9090/ScadaBR/help.shtm"><img src="./ScadaBR - 1.0 CE_files/help.png" onmouseover="if (typeof hMD == &#39;function&#39;) hMD(&#39;Help&#39;, this);" onmouseout="if (typeof hMD == &#39;function&#39;) hMD();" border="0"></a>
+        
+        
+        <div id="headerMenuDescription" class="labelDiv" style="position:absolute;display:none;"></div>
+      </td>
+      
+      <td align="right">
+        
+          <span class="copyTitle">User: <b>admin</b></span>
+          <img id="userMutedImg" class="ptr" onclick="MiscDwr.toggleUserMuted(setUserMuted)" onmouseover="hideLayer(&#39;localeEdit&#39;)" border="0" src="./ScadaBR - 1.0 CE_files/sound_none.png" title="Mute" alt="Mute" style="display: inline;">
+          <img src="./ScadaBR - 1.0 CE_files/house.png" alt="Go to my default page" title="Go to my default page" class="ptr" onclick="goHomeUrl()" onmouseover="hideLayer(&#39;localeEdit&#39;)" border="0">
+          <img src="./ScadaBR - 1.0 CE_files/house_link.png" alt="Make this my default page" title="Make this my default page" class="ptr" onclick="setHomeUrl()" onmouseover="hideLayer(&#39;localeEdit&#39;)" border="0">
+        
+        <div style="display:inline;" onmouseover="showMenu(&#39;localeEdit&#39;, -40, 10);">
+          <img src="./ScadaBR - 1.0 CE_files/world.png" alt="Change language" title="Change language" border="0">
+          <div id="localeEdit" style="visibility:hidden;left:0px;top:15px;" class="labelDiv" onmouseout="hideLayer(this)">
+            
+              <a class="ptr" onclick="setLocale(&#39;de&#39;)">Deutsch</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;zh&#39;)">中文</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;fi&#39;)">Suomi</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;pt&#39;)">Português</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;fr&#39;)">Francais</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;en&#39;)">English</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;lu&#39;)">Lëtzebuergesch</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;ru&#39;)">Руссиан</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;es&#39;)">Español</a><br>
+            
+              <a class="ptr" onclick="setLocale(&#39;nl&#39;)">Nederlands</a><br>
+            
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody></table>
+
+
+<div style="padding:5px;">
+  
+	<script type="text/javascript">
+    var currentPoint;
+    var pointListColumnFunctions = new Array();
+    var pointListOptions;
+    
+    function init() {
+        var pointListColumnHeaders = new Array();
+        
+        pointListColumnHeaders.push("Name");
+        pointListColumnFunctions.push(function(p) { return "<b>"+ p.name +"</b>"; });
+        
+        pointListColumnHeaders.push("Data type");
+        pointListColumnFunctions.push(function(p) { return p.dataTypeMessage; });
+        
+        pointListColumnHeaders.push("Status");
+        pointListColumnFunctions.push(function(p) {
+                var id = "toggleImg"+ p.id;
+                var onclick = "togglePoint("+ p.id +")";
+                if (p.enabled)
+                    return writeImage(id, null, "brick_go", "Enabled - click to disable", onclick);
+                return writeImage(id, null, "brick_stop", "Disabled - click to enable", onclick);
+        });
+        
+        if (typeof appendPointListColumnFunctions == 'function')
+            appendPointListColumnFunctions(pointListColumnHeaders, pointListColumnFunctions);
+        
+        pointListColumnHeaders.push("");
+        pointListColumnFunctions.push(function(p) {
+                return writeImage("editImg"+ p.id, null, "icon_comp_edit", "Edit", "editPoint("+ p.id +")");
+        });
+        
+        var headers = $("pointListHeaders");
+        var td;
+        for (var i=0; i<pointListColumnHeaders.length; i++) {
+            td = document.createElement("td");
+            if (typeof(pointListColumnHeaders[i]) == "string")
+                td.innerHTML = pointListColumnHeaders[i];
+            else
+                pointListColumnHeaders[i](td);
+            headers.appendChild(td);
+        }
+        
+        pointListOptions = {
+                rowCreator: function(options) {
+                    var tr = document.createElement("tr");
+                    tr.mangoId = "p"+ options.rowData.id;
+                    tr.className = "row"+ (options.rowIndex % 2 == 0 ? "" : "Alt");
+                    return tr;
+                },
+                cellCreator: function(options) {
+                    var td = document.createElement("td");
+                    if (options.cellNum == 2)
+                        td.align = "center";
+                    return td;
+                }
+        };
+        
+        var dsStatus = $("dsStatusImg");
+        setDataSourceStatusImg(false, dsStatus);
+        hide(dsStatus);
+        
+        if (typeof initImpl == 'function') initImpl();
+        
+        DataSourceEditDwr.editInit(initCB);
+        showMessage("dataSourceMessage");
+        showMessage("pointMessage");
+    }
+    
+    function initCB(response) {
+        writePointList(response.data.points);
+        writeAlarms(response.data.alarms);
+        
+        
+    }
+    
+    function saveDataSource() {
+        startImageFader("dsSaveImg", true);
+        hideContextualMessages($("dataSourceProperties"));
+        saveDataSourceImpl();
+    }
+    
+    function saveDataSourceCB(response) {
+        stopImageFader("dsSaveImg");
+        if (response.hasMessages)
+            showDwrMessages(response.messages, "dataSourceGenericMessages");
+        else {
+            showMessage("dataSourceMessage", "Data source has been saved");
+            DataSourceEditDwr.getPoints(writePointList);
+        }
+        getAlarms();
+    }
+    
+    function toggleDataSource() {
+        if (typeof toggleDataSourceImpl == 'function') toggleDataSourceImpl();
+        
+        var imgNode = $("dsStatusImg");
+        if (!hasImageFader(imgNode)) {
+            DataSourceEditDwr.toggleEditDataSource(toggleDataSourceCB);
+            startImageFader(imgNode);
+        }
+    }
+    
+    function toggleDataSourceCB(result) {
+        var imgNode = $("dsStatusImg");
+        stopImageFader(imgNode);
+        setDataSourceStatusImg(result.enabled, imgNode);
+        getAlarms();
+    }
+    
+    function togglePoint(pointId) {
+        DataSourceEditDwr.togglePoint(pointId, togglePointCB);
+        startImageFader("toggleImg"+ pointId, true);
+    }
+    
+    function togglePointCB(response) {
+        stopImageFader("toggleImg"+ response.data.id);
+        writePointList(response.data.points);
+    }
+    
+    function deletePoint() {
+        if (confirm("Are you sure you wish to delete this point?")) {
+            DataSourceEditDwr.deletePoint(currentPoint.id, deletePointCB);
+            startImageFader("pointDeleteImg", true);
+        }
+    }
+    
+    function deletePointCB(points) {
+        stopImageFader("pointDeleteImg");
+        hide("pointDetails");
+        currentPoint = null;
+        writePointList(points);
+    }
+    
+    function writePointList(points) {
+        if (typeof writePointListImpl == 'function') writePointListImpl(points);
+        
+        if (!points)
+            return;
+        show("pointProperties");
+        show("alarmsTable");
+        show("dsStatusImg");
+    
+        if (currentPoint)
+            stopImageFader("editImg"+ currentPoint.id);
+        dwr.util.removeAllRows("pointsList");
+        dwr.util.addRows("pointsList", points, pointListColumnFunctions, pointListOptions);
+    }
+    
+    function addPoint(ref) {
+        if (!dojo.html.isShowing("pointProperties")) {
+            alert("Save the data source before adding points");
+            return;
+        }
+        
+        if (currentPoint)
+            stopImageFader("editImg"+ currentPoint.id);
+        
+        startImageFader("editImg"+ -1);
+        hideContextualMessages("pointProperties");
+        
+        addPointImpl(ref);
+    }
+    
+    function editPoint(pointId) {
+        if (currentPoint)
+            stopImageFader("editImg"+ currentPoint.id);
+        DataSourceEditDwr.getPoint(pointId, editPointCB);
+        hideContextualMessages("pointProperties");
+    }
+    
+    function editPointCB(point) {
+        currentPoint = point;
+        display("pointDeleteImg", point.id != -1);
+        var locator = currentPoint.pointLocator;
+        
+        $set("name", currentPoint.name);
+        $set("xid", currentPoint.xid);
+        var cancel;
+        if (typeof editPointCBImpl == 'function') cancel = editPointCBImpl(locator);
+        if (!cancel) {
+            startImageFader("editImg"+ point.id);
+            show("pointDetails");
+        }
+    }
+    
+    function cancelEditPoint() {
+        if (currentPoint) {
+            stopImageFader("editImg"+ currentPoint.id);
+            currentPoint = null;
+            hide("pointDetails");
+        }
+    }
+    
+    function savePoint() {
+        startImageFader("pointSaveImg", true);
+        hideContextualMessages("pointProperties");
+        var locator = currentPoint.pointLocator;
+        
+        // Prevents DWR warnings
+        delete locator.configurationDescription;
+        delete locator.dataTypeMessage;
+        
+        savePointImpl(locator);
+    }
+    
+    function savePointCB(response) {
+        stopImageFader("pointSaveImg");
+        if (response.hasMessages)
+            showDwrMessages(response.messages);
+        else {
+            writePointList(response.data.points);
+            editPoint(response.data.id);
+            showMessage("pointMessage", "Point details saved");
+        }
+    }
+    
+    function getAlarms() {
+        DataSourceEditDwr.getAlarms(writeAlarms);
+    }
+    
+    function writeAlarms(alarms) {
+        dwr.util.removeAllRows("alarmsList");
+        if (alarms.length == 0) {
+            show("noAlarmsMsg");
+            hide("alarmsList");
+        }
+        else {
+            hide("noAlarmsMsg");
+            show("alarmsList");
+            dwr.util.addRows("alarmsList", alarms, [
+                    function(alarm) {
+                        var div = document.createElement("div");
+                        var img = document.createElement("img");
+                        setAlarmLevelImg(alarm.alarmLevel, img);
+                        div.appendChild(img);
+                        
+                        var span = document.createElement("span");
+                        span.innerHTML = alarm.prettyActiveTimestamp +": "+ alarm.message;
+                        div.appendChild(span);
+                        
+                        return div; 
+                    }],
+                    {
+                        cellCreator: function(options) {
+                            var td = document.createElement("td");
+                            td.className = "formError";
+                            return td;
+                        }
+                    });
+        }
+    }
+    
+    function alarmLevelChanged(eventId) {
+        var alarmLevel = $get("alarmLevel"+ eventId);
+        DataSourceEditDwr.updateEventAlarmLevel(eventId, alarmLevel);
+        setAlarmLevelImg(alarmLevel, "alarmLevelImg"+ eventId);
+    }
+
+    function enableAllPoints() {
+    	 startImageFader($("enableAllImg"));
+    	 DataSourceEditDwr.enableAllPoints(enableAllPointsCB);
+    }
+
+    function enableAllPointsCB(points) {
+    	stopImageFader($("enableAllImg"));
+    	writePointList(points);
+    }
+  </script>
+
+	<table class="borderDiv marB" cellpadding="0" cellspacing="0" id="alarmsTable" style="display: none;">
+		<tbody><tr>
+			<td>
+				<table width="100%">
+					<tbody><tr>
+						<td class="smallTitle">Current alarms
+						</td>
+						<td align="right"><img src="./ScadaBR - 1.0 CE_files/control_repeat_blue.png" alt="Refresh" title="Refresh" class="ptr" onclick="getAlarms()" border="0">
+						</td>
+					</tr>
+				</tbody></table>
+				<table>
+					<tbody><tr id="noAlarmsMsg">
+						<td><b>No active alarms for this data source
+						</b>
+						</td>
+					</tr>
+					</tbody><tbody id="alarmsList" style="display: none;"></tbody>
+				</table></td>
+		</tr>
+	</tbody></table>
+
+	
+		
+		
+		
+			
+
+
+
+
+<script type="text/javascript">
+  function initImpl() {
+      scanButtons(false);
+      changeRange('test_');
+  }
+  
+  function scan() {
+      $set("scanMessage", "Starting scan...");
+      dwr.util.removeAllOptions("scanNodes");
+      scanButtons(true);
+      scanImpl();
+  }
+  
+  function scanCB(msg) {
+      if (msg)
+          alert(msg);
+      else
+          setTimeout(scanUpdate, 1000);
+  }
+
+  function scanUpdate() {
+      DataSourceEditDwr.modbusScanUpdate(scanUpdateCB);
+  }
+  
+  function scanUpdateCB(result) {
+      if (result) {
+          $set("scanMessage", result.message);
+          dwr.util.removeAllOptions("scanNodes");
+          dwr.util.addOptions("scanNodes", result.nodes);
+          if (!result.finished)
+              scanCB();
+          else
+              scanButtons(false);
+      }
+  }
+  
+  function scanCancel() {
+      DataSourceEditDwr.cancelTestingUtility(scanButtons);
+  }
+  
+  function scanButtons(scanning) {
+      setDisabled("scanBtn", scanning);
+      setDisabled("scanCancelBtn", !scanning);
+  }
+  
+  function locatorTest() {
+      setDisabled("locatorTestBtn", true);
+      
+      var locator = {};
+      locator.slaveId = $get("test_slaveId");
+      locator.range = $get("test_range");
+      locator.modbusDataType = $get("test_modbusDataType");
+      locator.offset = $get("test_offset");
+      locator.bit = $get("test_bit");
+      locator.registerCount = $get("test_registerCount");
+      locator.charset = $get("test_charset");
+      
+      locatorTestImpl(locator);
+  }
+  
+  function locatorTestCB(response) {
+      hideContextualMessages("locatorTestDiv");
+      hideGenericMessages("locatorTestGeneric");
+      if (response.hasMessages) {
+          // Add the prefix to the contextual messages.
+          for (var i=0; i<response.messages.length; i++) {
+              if (response.messages[i].contextKey)
+                  response.messages[i].contextKey = "test_"+ response.messages[i].contextKey;
+          }
+          showDwrMessages(response.messages, "locatorTestGeneric");
+          $set("locatorTestResult");
+      }
+      else
+          $set("locatorTestResult", response.data.result);
+      setDisabled("locatorTestBtn", false);
+  }
+  
+  function dataTest() {
+      setDisabled("dataTestBtn", true);
+      dataTestImpl($get("dataTest_slaveId"), $get("dataTest_range"), $get("dataTest_offset"), $get("dataTest_length"));
+      hideGenericMessages("dataTestGeneric");
+  }
+  
+  function dataTestCB(response) {
+	  if (response.data.length)
+		  $set("dataTest_length", response.data.length);
+	  
+      if (response.hasMessages) {
+          showDwrMessages(response.messages, "dataTestGeneric");
+          hide("dataTestResults");
+      }
+      else {
+    	  var results = "";
+    	  for (var i=0; i<response.data.results.length; i++)
+    		  results += response.data.results[i] +"<br/>";
+          $set("dataTestResults", results);
+          show("dataTestResults");
+      }
+
+      setDisabled("dataTestBtn", false);
+  }
+  
+  function addPointImpl() {
+	  DataSourceEditDwr.getPoint(-1, function(point) {
+		  editPointCB(point);
+	      $set("slaveId", $get("test_slaveId"));
+	      $set("range", $get("test_range"));
+	      $set("modbusDataType", $get("test_modbusDataType"));
+	      $set("offset", $get("test_offset"));
+	      $set("bit", $get("test_bit"));
+	      $set("registerCount", $get("test_registerCount"));
+	      $set("charset", $get("test_charset"));
+          changeRange('');
+	  });
+  }
+  
+  function appendPointListColumnFunctions(pointListColumnHeaders, pointListColumnFunctions) {
+      pointListColumnHeaders[pointListColumnHeaders.length] = "Slave";
+      pointListColumnFunctions[pointListColumnFunctions.length] = function(p) { return p.pointLocator.slaveId; };
+      
+      pointListColumnHeaders[pointListColumnHeaders.length] = "Range";
+      pointListColumnFunctions[pointListColumnFunctions.length] = function(p) {
+          if (p.pointLocator.slaveMonitor)
+              return "Slave monitor";
+          return p.pointLocator.rangeMessage;
+      };
+      
+      pointListColumnHeaders[pointListColumnHeaders.length] = "Offset (0-based)";
+      pointListColumnFunctions[pointListColumnFunctions.length] = function(p) {
+    	  if (p.pointLocator.slaveMonitor)
+    		  return "";
+    	  if (isBinary('', p.pointLocator.modbusDataType) && !isBinaryRange('', p.pointLocator.range))
+              return p.pointLocator.offset +'/'+ p.pointLocator.bit;
+    	  return p.pointLocator.offset;
+  	  };
+  }
+  
+  function editPointCBImpl(locator) {
+      $set("slaveId", locator.slaveId);
+      $set("range", locator.range);
+      $set("modbusDataType", locator.modbusDataType);
+      $set("offset", locator.offset);
+      $set("bit", locator.bit);
+      $set("registerCount", locator.registerCount);
+      $set("charset", locator.charset);
+      $set("settableOverride", locator.settableOverride);
+      $set("multiplier", locator.multiplier);
+      $set("additive", locator.additive);
+
+      if (locator.slaveMonitor) {
+          hide("nonSlaveMonitor");
+          setDisabled("slaveId", true);
+      }
+      else {
+          setDisabled("slaveId", false);
+          show("nonSlaveMonitor");
+          changeRange('');
+      }
+  }
+  
+  function savePointImpl(locator) {
+      delete locator.settable;
+      delete locator.rangeMessage;
+      delete locator.dataTypeId;
+      delete locator.relinquishable;
+      
+      locator.slaveId = $get("slaveId");
+      locator.range = $get("range");
+      locator.modbusDataType = $get("modbusDataType");
+      locator.offset = $get("offset");
+      locator.bit = $get("bit");
+      locator.registerCount = $get("registerCount");
+      locator.charset = $get("charset");
+      locator.settableOverride = $get("settableOverride");
+      locator.multiplier = $get("multiplier");
+      locator.additive = $get("additive");
+      
+      DataSourceEditDwr.saveModbusPointLocator(currentPoint.id, $get("xid"), $get("name"), locator, savePointCB);
+  }
+  
+  function changeRange(prefix) {
+      if (isBinaryRange(prefix)) {
+          $set(prefix +"modbusDataType", "1");
+          setDisabled(prefix +"modbusDataType", true);
+      }
+      else
+          setDisabled(prefix +"modbusDataType", false);
+      changeDataType(prefix);
+      
+      var rangeId = $get(prefix +"range");
+      if (rangeId == "1" || rangeId == "3")
+          maybeSetDisabled(prefix +"settableOverride", false);
+      else {
+    	  maybeSetDisabled(prefix +"settableOverride", true);
+          $set(prefix +"settableOverride", false);
+      }
+  }
+  
+  function isBinary(prefix, dt) {
+	  if (!dt)
+		  dt = $get(prefix +"modbusDataType");
+      return dt == "1";
+  }
+  
+  function isBinaryRange(prefix, r) {
+	  if (!r)
+	      r = $get(prefix +"range");
+      return r == "1" || r == "2";
+  }
+  
+  function isString(prefix) {
+	  var dt = $get(prefix +"modbusDataType");
+      return dt == "18" || dt == "19";
+  }
+  
+  function changeDataType(prefix) {
+	  if (isBinary(prefix)) {
+          setDisabled(prefix +"bit", isBinaryRange(prefix));
+          setDisabled(prefix +"registerCount", true);
+          setDisabled(prefix +"charset", true);
+          maybeSetDisabled(prefix +"multiplier", true);
+          maybeSetDisabled(prefix +"additive", true);
+	  }
+	  else if (isString(prefix)) {
+          setDisabled(prefix +"bit", true);
+          setDisabled(prefix +"registerCount", false);
+          setDisabled(prefix +"charset", false);
+          maybeSetDisabled(prefix +"multiplier", true);
+          maybeSetDisabled(prefix +"additive", true);
+	  }
+	  else {
+          setDisabled(prefix +"bit", true);
+          setDisabled(prefix +"registerCount", true);
+          setDisabled(prefix +"charset", true);
+          maybeSetDisabled(prefix +"multiplier", false);
+          maybeSetDisabled(prefix +"additive", false);
+	  }
+  }
+  
+  function maybeSetDisabled(nodeName, val) {
+	  var node = $(nodeName);
+	  if (node)
+		  setDisabled(node, val);
+  }
+</script>
+
+
+  
+  
+    
+    
+  
+
+
+
+<table cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td valign="top">
+      <div class="borderDiv marB marR" id="dataSourceProperties">
+        <table width="100%">
+          <tbody><tr>
+            <td class="smallTitle">
+              <img src="./ScadaBR - 1.0 CE_files/icon_ds.png" alt="Edit" title="Edit" border="0">
+              Modbus IP properties
+              <img src="./ScadaBR - 1.0 CE_files/help.png" alt="Help" title="Help" class="ptr" onclick="help(&#39;modbusIpDS&#39;, this);" style="display:inline" border="0">
+            </td>
+            <td align="right">
+              <img id="dsStatusImg" src="./ScadaBR - 1.0 CE_files/database_stop.png" class="ptr" onclick="toggleDataSource()" style="display: none;" border="0" title="Disabled - click to enable" alt="Disabled - click to enable">
+              <img id="dsSaveImg" src="./ScadaBR - 1.0 CE_files/save.png" alt="Save" title="Save" class="ptr" onclick="saveDataSource()" border="0">
+            </td>
+          </tr>
+        </tbody></table>
+        <div id="dataSourceMessage" class="ctxmsg formError" style="display: none;"></div>
+        <table>
+          <tbody><tr>
+            <td class="formLabelRequired">Name</td>
+            <td class="formField"><input type="text" id="dataSourceName" value=""></td>
+          </tr>
+          <tr>
+            <td class="formLabelRequired">Export ID (XID)</td>
+            <td class="formField"><input type="text" id="dataSourceXid" value="DS_271612"></td>
+          </tr>
+        <tr>
+          <td class="formLabelRequired">Update period</td>
+          <td class="formField">
+            <input type="text" id="updatePeriods" value="5" class="formShort">
+            <select id="updatePeriodType">
+
+              
+  
+    
+      
+      
+        <option value="8">millisecond(ms)</option>
+        <option value="1">second(s)</option>
+        <option value="2" selected="selected">minutes(s)</option>
+        <option value="3">hours(s)</option>
+        
+        
+        
+        
+      
+      
+  
+  
+
+            </select>
+          </td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Quantize</td>
+          <td class="formField"><input type="checkbox" id="quantize" value="true">
+</td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Timeout (ms)</td>
+          <td class="formField"><input type="text" id="timeout" value="500"></td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Retries</td>
+          <td class="formField"><input type="text" id="retries" value="2"></td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Contiguous batches only</td>
+          <td class="formField"><input type="checkbox" id="contiguousBatches" value="true">
+</td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Create slave monitor points</td>
+          <td class="formField"><input type="checkbox" id="createSlaveMonitorPoints" value="true">
+</td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Max read bit count</td>
+          <td class="formField"><input type="text" id="maxReadBitCount" value="2000"></td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Max read register count</td>
+          <td class="formField"><input type="text" id="maxReadRegisterCount" value="125"></td>
+        </tr>
+              
+        <tr>
+          <td class="formLabelRequired">Max write register count</td>
+          <td class="formField"><input type="text" id="maxWriteRegisterCount" value="120"></td>
+        </tr>
+              
+        
+          
+          
+            
+
+
+
+<script type="text/javascript">
+  function scanImpl() {
+      DataSourceEditDwr.modbusIpScan($get("timeout"), $get("retries"), $get("transportType"), $get("host"), 
+              $get("port"), $get("encapsulated"), scanCB);
+  }
+  
+  function locatorTestImpl(locator) {
+      DataSourceEditDwr.testModbusIpLocator($get("timeout"), $get("retries"), $get("transportType"), $get("host"), 
+              $get("port"), $get("encapsulated"), locator, locatorTestCB);
+  }
+  
+  function dataTestImpl(slaveId, range, offset, length) {
+      DataSourceEditDwr.testModbusIpData($get("timeout"), $get("retries"), $get("transportType"), $get("host"), 
+              $get("port"), $get("encapsulated"), slaveId, range, offset, length, dataTestCB);
+  }
+  
+  function saveDataSourceImpl() {
+      DataSourceEditDwr.saveModbusIpDataSource($get("dataSourceName"), $get("dataSourceXid"), $get("updatePeriods"),
+              $get("updatePeriodType"), $get("quantize"), $get("timeout"), $get("retries"), $get("contiguousBatches"),
+              $get("createSlaveMonitorPoints"), $get("maxReadBitCount"), $get("maxReadRegisterCount"), 
+              $get("maxWriteRegisterCount"), $get("transportType"), $get("host"), $get("port"), $get("encapsulated"),
+              saveDataSourceCB);
+  }
+</script>
+
+<tr>
+  <td class="formLabelRequired">Transport type</td>
+  <td class="formField">
+    <select id="transportType">
+
+      <option value="TCP">TCP</option>
+      <option value="TCP_KEEP_ALIVE">TCP with keep-alive</option>
+      <option value="UDP">UDP</option>
+    </select>
+  </td>
+</tr>
+
+<tr>
+  <td class="formLabelRequired">Host</td>
+  <td class="formField"><input id="host" type="text" value=""></td>
+</tr>
+
+<tr>
+  <td class="formLabelRequired">Port</td>
+  <td class="formField"><input id="port" type="text" value="502"></td>
+</tr>
+
+<tr>
+  <td class="formLabelRequired">Encapsulated</td>
+  <td class="formField"><input type="checkbox" id="encapsulated" value="true">
+</td>
+</tr>
+          
+        
+      </tbody></table>
+      <table width="100%">
+  <tbody><tr><td class="smallTitle">
+    <img src="./ScadaBR - 1.0 CE_files/flag_white.png" border="0">
+    Event alarm levels
+  </td></tr>
+</tbody></table>
+<table cellspacing="1">
+  
+    
+    
+      
+        <tbody><tr>
+          <td><b>Data source exception</b></td>
+          <td>
+            <select id="alarmLevel3" onchange="alarmLevelChanged(3)">
+
+              
+  
+    
+    <option value="0">None</option>
+    <option value="1">Information</option>
+    <option value="2" selected="selected">Urgent</option>
+    <option value="3">Critical</option>
+    <option value="4">Life safety</option>
+  
+  
+
+
+            </select>
+            <img id="alarmLevelImg3" src="./ScadaBR - 1.0 CE_files/flag_yellow.png" style="" border="0" title="Urgent" alt="Urgent">
+            <script type="text/javascript">setAlarmLevelImg(2, 'alarmLevelImg3')</script>
+          </td>
+        </tr>
+      
+        <tr>
+          <td><b>Point read exception</b></td>
+          <td>
+            <select id="alarmLevel1" onchange="alarmLevelChanged(1)">
+
+              
+  
+    
+    <option value="0">None</option>
+    <option value="1">Information</option>
+    <option value="2" selected="selected">Urgent</option>
+    <option value="3">Critical</option>
+    <option value="4">Life safety</option>
+  
+  
+
+
+            </select>
+            <img id="alarmLevelImg1" src="./ScadaBR - 1.0 CE_files/flag_yellow.png" style="" border="0" title="Urgent" alt="Urgent">
+            <script type="text/javascript">setAlarmLevelImg(2, 'alarmLevelImg1')</script>
+          </td>
+        </tr>
+      
+        <tr>
+          <td><b>Point write exception</b></td>
+          <td>
+            <select id="alarmLevel2" onchange="alarmLevelChanged(2)">
+
+              
+  
+    
+    <option value="0">None</option>
+    <option value="1">Information</option>
+    <option value="2" selected="selected">Urgent</option>
+    <option value="3">Critical</option>
+    <option value="4">Life safety</option>
+  
+  
+
+
+            </select>
+            <img id="alarmLevelImg2" src="./ScadaBR - 1.0 CE_files/flag_yellow.png" style="" border="0" title="Urgent" alt="Urgent">
+            <script type="text/javascript">setAlarmLevelImg(2, 'alarmLevelImg2')</script>
+          </td>
+        </tr>
+      
+    
+  
+</tbody></table>
+    </div>
+  </td>
+  
+  <td valign="top">
+    <div class="borderDiv marB marR" style="float:left;">
+      <table>
+        <tbody><tr><td colspan="2" class="smallTitle">Modbus node scan</td></tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input id="scanBtn" type="button" value="Scan for nodes" onclick="scan();" class="">
+            <input id="scanCancelBtn" type="button" value="Cancel" onclick="scanCancel();" disabled="" class="formDisabled">
+          </td>
+        </tr>
+        
+        <tr><td colspan="2" id="scanMessage" class="formError"></td></tr>
+        
+        <tr>
+          <td class="formLabel">Nodes found</td>
+          <td class="formField"><select id="scanNodes" size="8"></select></td>
+        </tr>
+      </tbody></table>
+    </div>
+    
+    <div class="borderDiv marB marR" style="float:left;">
+      <table>
+        <tbody><tr><td colspan="2" class="smallTitle">Modbus read data</td></tr>
+        
+        <tr>
+          <td class="formLabelRequired">Slave id</td>
+          <td class="formField"><input type="text" id="dataTest_slaveId" value="1"></td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Register range</td>
+          <td class="formField">
+            <select id="dataTest_range">
+              <option value="1">Coil status</option>
+              <option value="2">Input status</option>
+              <option value="3">Holding register</option>
+              <option value="4">Input register</option>
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Offset (0-based)</td>
+          <td class="formField"><input type="text" id="dataTest_offset" value="0"></td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Number of registers</td>
+          <td class="formField"><input type="text" id="dataTest_length" value="100"></td>
+        </tr>
+        
+        <tr>
+          <td colspan="2" align="center">
+            <input id="dataTestBtn" type="button" value="Read data" onclick="dataTest();">
+          </td>
+        </tr>
+        
+        <tr><td colspan="2"><div id="dataTestResults" style="height: 200px; width: 100%; overflow: scroll; display: none;"></div></td></tr>
+        
+        <tr><td colspan="2"><table><tbody id="dataTestGeneric"></tbody></table></td></tr> 
+      </tbody></table>
+    </div>
+    
+    <div class="borderDiv marB" id="locatorTestDiv" style="clear:both;">
+      <table>
+        <tbody><tr><td colspan="2" class="smallTitle">Point locator test</td></tr>
+        
+        <tr>
+          <td class="formLabelRequired">Slave id</td>
+          <td class="formField"><input type="text" id="test_slaveId" value="1"></td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Register range</td>
+          <td class="formField">
+            <select id="test_range" onchange="changeRange(&#39;test_&#39;)">
+              <option value="1">Coil status</option>
+              <option value="2">Input status</option>
+              <option value="3">Holding register</option>
+              <option value="4">Input register</option>
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Modbus data type</td>
+          <td class="formField">
+            <select id="test_modbusDataType" onchange="changeDataType(&#39;test_&#39;)" disabled="" class="formDisabled">
+              <option value="1">Binary</option>
+              <option value="2">2 byte unsigned integer</option>
+              <option value="3">2 byte signed integer</option>
+              <option value="16">2 byte BCD</option>
+              <option value="4">4 byte unsigned integer</option>
+              <option value="5">4 byte signed integer</option>
+              <option value="6">4 byte unsigned integer swapped</option>
+              <option value="7">4 byte signed integer swapped</option>
+              <option value="8">4 byte float</option>
+              <option value="9">4 byte float swapped</option>
+              <option value="20">4 byte float swapped inverted</option>            
+              <option value="17">4 byte BCD</option>
+              <option value="10">8 byte unsigned integer</option>
+              <option value="11">8 byte signed integer</option>
+              <option value="12">8 byte unsigned integer swapped</option>
+              <option value="13">8 byte signed integer swapped</option>
+              <option value="14">8 byte float</option>
+              <option value="15">8 byte float swapped</option>
+              <option value="18">Fixed length string</option>
+              <option value="19">Variable length string</option>
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Offset (0-based)</td>
+          <td class="formField"><input type="text" id="test_offset" value="0"></td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Bit</td>
+          <td class="formField"><input id="test_bit" type="text" value="0" disabled="" class="formDisabled"></td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Number of registers</td>
+          <td class="formField"><input id="test_registerCount" type="text" value="0" disabled="" class="formDisabled"></td>
+        </tr>
+        
+        <tr>
+          <td class="formLabelRequired">Character encoding</td>
+          <td class="formField"><input id="test_charset" type="text" value="ASCII" disabled="" class="formDisabled"></td>
+        </tr>
+        
+        <tr>
+          <td colspan="2" align="center">
+            <input id="locatorTestBtn" type="button" value="Read" onclick="locatorTest();">
+            <input type="button" value="Add point" onclick="addPoint();">
+          </td>
+        </tr>
+        
+        <tr><td colspan="2" id="locatorTestResult" class="formError"></td></tr>
+        <tr><td colspan="2"><table><tbody id="locatorTestGeneric"></tbody></table></td></tr> 
+        
+
+        </tbody></table>
+      </div>
+    </td>
+  </tr>
+</tbody></table>
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" id="pointProperties" style="display:none;">
+  <tbody><tr>
+    <td valign="top">
+      <div class="borderDiv marR marB">
+        <table width="100%">
+          <tbody><tr>
+            <td class="smallTitle">Points</td>
+            <td align="right">
+            <img id="enableAllImg" src="./ScadaBR - 1.0 CE_files/icon_ds_go.png" alt="Enable all points" title="Enable all points" class="ptr" onclick="enableAllPoints()" border="0">
+              <img id="editImg-1" src="./ScadaBR - 1.0 CE_files/icon_comp_add.png" class="ptr" onclick="editPoint(-1)" border="0">
+            </td>
+          </tr>
+        </tbody></table>
+        <table cellspacing="1">
+          <tbody><tr class="rowHeader" id="pointListHeaders"><td>Name</td><td>Data type</td><td>Status</td><td>Slave</td><td>Range</td><td>Offset (0-based)</td><td></td></tr>
+          </tbody><tbody id="pointsList"></tbody>
+        </table>
+      </div>
+    </td>
+
+    <td valign="top">
+      <div id="pointDetails" class="borderDiv marB" style="display: none;">
+        <table width="100%">
+          <tbody><tr>
+            <td>
+              <span class="smallTitle">Point details</span>
+              <img src="./ScadaBR - 1.0 CE_files/help.png" alt="Help" title="Help" class="ptr" onclick="help(&#39;modbusPP&#39;, this);" style="display:inline" border="0">
+            </td>
+            <td align="right">
+              <img id="pointSaveImg" src="./ScadaBR - 1.0 CE_files/save.png" alt="Save" title="Save" class="ptr" onclick="savePoint()" border="0">
+              <img id="pointDeleteImg" src="./ScadaBR - 1.0 CE_files/delete.png" alt="Delete" title="Delete" class="ptr" onclick="deletePoint()" border="0">
+            </td>
+          </tr>
+        </tbody></table>
+        <div id="pointMessage" class="ctxmsg formError" style="display: none;"></div>
+        
+        <table>
+          <tbody><tr>
+            <td class="formLabelRequired">Name</td>
+            <td class="formField"><input type="text" id="name"></td>
+          </tr>
+          <tr>
+            <td class="formLabelRequired">Export ID (XID)</td>
+            <td class="formField"><input type="text" id="xid"></td>
+          </tr>
+          
+          
+  <tr>
+    <td class="formLabelRequired">Slave id</td>
+    <td class="formField"><input type="text" id="slaveId"></td>
+  </tr>
+  
+  </tbody><tbody id="nonSlaveMonitor">
+    <tr>
+      <td class="formLabelRequired">Register range</td>
+      <td class="formField">
+        <select id="range" onchange="changeRange(&#39;&#39;)">
+          <option value="1">Coil status</option>
+          <option value="2">Input status</option>
+          <option value="3">Holding register</option>
+          <option value="4">Input register</option>
+        </select>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="formLabelRequired">Modbus data type</td>
+      <td class="formField">
+        <select id="modbusDataType" onchange="changeDataType(&#39;&#39;)">
+          <option value="1">Binary</option>
+          <option value="2">2 byte unsigned integer</option>
+          <option value="3">2 byte signed integer</option>
+          <option value="16">2 byte BCD</option>
+          <option value="4">4 byte unsigned integer</option>
+          <option value="5">4 byte signed integer</option>
+          <option value="6">4 byte unsigned integer swapped</option>
+          <option value="7">4 byte signed integer swapped</option>
+          <option value="8">4 byte float</option>
+          <option value="9">4 byte float swapped</option>
+          <option value="20">4 byte float swapped inverted</option>            
+          <option value="17">4 byte BCD</option>
+          <option value="10">8 byte unsigned integer</option>
+          <option value="11">8 byte signed integer</option>
+          <option value="12">8 byte unsigned integer swapped</option>
+          <option value="13">8 byte signed integer swapped</option>
+          <option value="14">8 byte float</option>
+          <option value="15">8 byte float swapped</option>
+          <option value="18">Fixed length string</option>
+          <option value="19">Variable length string</option>
+        </select>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="formLabelRequired">Offset (0-based)</td>
+      <td class="formField"><input type="text" id="offset"></td>
+    </tr>
+    
+    <tr>
+      <td class="formLabelRequired">Bit</td>
+      <td class="formField"><input id="bit" type="text"></td>
+    </tr>
+    
+    <tr>
+      <td class="formLabelRequired">Number of registers</td>
+      <td class="formField"><input id="registerCount" type="text"></td>
+    </tr>
+    
+    <tr>
+      <td class="formLabelRequired">Character encoding</td>
+      <td class="formField"><input id="charset" type="text"></td>
+    </tr>
+    
+    <tr>
+      <td class="formLabelRequired">Settable</td>
+      <td class="formField"><input id="settableOverride" type="checkbox"></td>
+    </tr>
+    
+    <tr>
+      <td class="formLabel">Multiplier</td>
+      <td class="formField"><input type="text" id="multiplier"></td>
+    </tr>
+    
+    <tr>
+      <td class="formLabel">Additive</td>
+      <td class="formField"><input type="text" id="additive"></td>
+    </tr>
+  </tbody>
+
+          
+        </table>
+      </div>
+    </td>
+  </tr>
+</tbody></table>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+                
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+</div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr><td colspan="2">&nbsp;</td></tr>
+  <tr>
+    <td colspan="2" class="footer" align="center">©2009-2011 Fundação Certi, MCA Sistemas, Unis Sistemas, Conetec. All rights reserved.</td>
+  </tr>
+</tbody></table>
+
+  <script type="text/javascript">dojo.addOnLoad(init);</script>
+
+
+
+<div id="sm2-container" class="movieContainer" style="position: fixed; width: 8px; height: 8px; bottom: 0px; left: 0px; z-index: -1;"><embed name="sm2movie" id="sm2movie" src="./soundmanager2.swf" width="100%" height="100%" quality="high" allowscriptaccess="always" bgcolor="#ffffff" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></div><div id="soundmanager-debug" style="display: none;"></div></body></html>

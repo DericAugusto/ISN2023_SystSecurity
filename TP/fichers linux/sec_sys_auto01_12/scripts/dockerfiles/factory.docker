@@ -1,0 +1,8 @@
+# pygame ne s'install pas sur python 3.8 et suppérieur.
+FROM python:3.7
+RUN apt-get update
+RUN apt-get -y install libsdl-dev libsdl-ttf2.0-dev libsdl-mixer1.2-dev
+RUN pip3 install argparse coloredlogs pymunk pymodbus pygame
+WORKDIR /root
+RUN git clone https://gitlab.univ-lorraine.fr/lahmadi6/security-ics.git
+CMD bash

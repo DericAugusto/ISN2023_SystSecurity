@@ -1,0 +1,12 @@
+FROM debian
+
+RUN apt update 
+RUN apt install --no-install-recommends -y git sudo unzip ufw
+WORKDIR /root
+RUN git -c http.sslVerify=false clone https://gitlab.univ-lorraine.fr/lahmadi6/security-ics.git
+RUN git -c http.sslVerify=false clone https://github.com/thiagoralves/ScadaBR_Installer.git
+WORKDIR ScadaBR_Installer
+RUN ./install_scadabr.sh
+RUN ./update_scadabr.sh
+EXPOSE 9090
+CMD sudo /opt/tomcat6/apache-tomcat-6.0.53/bin/startup.sh && sleep infinity
